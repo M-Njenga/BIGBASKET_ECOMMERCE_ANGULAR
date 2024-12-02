@@ -1,0 +1,18 @@
+<div class="parent">
+    <div class="background">
+        <div class="shapes"></div>
+        <div class="shapes"></div>
+      </div>
+      <form>
+        <h3>Login </h3>
+        <label for="user"> Username</label>
+        <input type="text" name="userName" [(ngModel)]="loginObj.userName" name="user" id="user" placeholder="Enter Username" autocomplete="name" />
+        <label for="psw">Password</label>
+        <input type="password" name="password"  [(ngModel)]="loginObj.password" name="psw" id="psw" placeholder="Enter Password" autocomplete="password" />
+        <button type="button" (click)="onLogin()">Login Now</button>
+        <div class="social">
+          <div class="gg"><i class="bi bi-google"></i> Google</div>
+          <div class="fb"><i class="bi bi-facebook"></i> Facebook</div>
+        </div>
+      </form>
+</div>
