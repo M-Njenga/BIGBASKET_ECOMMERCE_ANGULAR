@@ -63,7 +63,6 @@ this.productsList=res;
   onUpdate(){
     this.productSrv.updateProduct(this.productObj).subscribe((res:any)=>{
 
-      console.log(res);
       if(res.result){
 
         this.snackBar.open(res.message, 'Close', { duration: 3000 });
@@ -72,7 +71,7 @@ this.productsList=res;
         this.snackBar.open(res.message, 'Close', { duration: 3000 });
       }
       this.getProducts();
-      console.log(res);
+     
     })
   }
 
@@ -82,14 +81,14 @@ this.productsList=res;
 
     if(isDelete){
       this.productSrv.deleteProduct(item.productId).subscribe((res:any)=>{
-        debugger;
-            if(res. result){
         
-                  alert("Product deleted");
-        
-            } else{
-              alert("error"); 
-            }
+        if(res.result){
+
+          this.snackBar.open(res.message, 'Close', { duration: 3000 });
+          
+        } else{
+          this.snackBar.open(res.message, 'Close', { duration: 3000 });
+        }
       this.getProducts();
       })
     }
